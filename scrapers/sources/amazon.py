@@ -5,7 +5,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import List, Optional
 
-from scrapers.sources.base import MarketplaceSpider
+from scrapers.sources.base import AsyncStealthySession, MarketplaceSpider
 from scrapers.parsing_utils import (
     extract_product_id,
     parse_bsr,
