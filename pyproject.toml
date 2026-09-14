@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapers"
+version = "1.0.0"
+description = "Enterprise e-commerce market research pipeline (Amazon, Meesho, Flipkart, DeoDap)"
+requires-python = ">=3.10"
+dependencies = ["python-dotenv>=1.0"]
+
+[project.optional-dependencies]
+fetchers = ["scrapling[fetchers]>=0.4.15"]
+sheets = ["gspread>=6"]
+dev = ["pytest>=8", "flake8>=7"]
+
+[project.scripts]
+pipeline = "scrapers.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scrapers*"]

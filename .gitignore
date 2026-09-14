@@ -1,0 +1,30 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Runtime artifacts ---
+data/
+crawls/
+logs/
+*.log
+core
+!data/.gitkeep
+
+# --- Editor / OS ---
+.DS_Store
+.vscode/
+.idea/

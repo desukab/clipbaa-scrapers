@@ -1,0 +1,36 @@
+{
+  "name": "clipbaa-scrapers (Codespaces)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "dbaeumer.vscode-eslint",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["tests", "-q"],
+        "python.terminal.activateEnvironment": true,
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/.pytest_cache": true,
+          "**/*.pyc": true,
+          "**/*.egg-info": true
+        }
+      }
+    }
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && pip install -e '.[dev,fetchers]' && (scrapling install --faked-user-agent --skip-deps || true) && python -c 'import scrapers; print(\"clipbaa-scrapers ready\")'",
+  "containerEnv": {
+    "PYTHONUNBUFFERED": "1",
+    "PIP_NO_CACHE_DIR": "0"
+  }
+}

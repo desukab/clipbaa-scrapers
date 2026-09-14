@@ -1,0 +1,42 @@
+{
+  "amazon_movers": {
+    "description": "Real ASINs from Amazon.in Movers & Shakers (find manually on amazon.in/gp/movers-and-shakers)",
+    "asins": [
+      "B0C9JX7KQ5",
+      "B0BV7L9J2M",
+      "B0CH5K3N8P",
+      "B0BZ4M6Q9R",
+      "B0C8J2L5N7"
+    ]
+  },
+  "amazon_categories": {
+    "kitchen": [
+      "B09V5K5K5K",
+      "B0BHJ8K9L2",
+      "B0CJ6M3N8P"
+    ],
+    "electronics": [
+      "B0BZ4M6Q9R",
+      "B0CH5K3N8P",
+      "B0C9JX7KQ5"
+    ],
+    "beauty": [
+      "B0BV7L9J2M",
+      "B0C8J2L5N7",
+      "B0BHJ8K9L2"
+    ],
+    "home": [
+      "B0CJ6M3N8P",
+      "B0BZ4M6Q9R",
+      "B0CH5K3N8P"
+    ]
+  },
+  "meesho_trending": {
+    "description": "Product IDs from Meesho trending page",
+    "ids": []
+  },
+  "flipkart_bestsellers": {
+    "description": "Product IDs from Flipkart bestsellers",
+    "ids": []
+  }
+}
